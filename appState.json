@@ -1,0 +1,115 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "8961e656-d01e-4109-838b-dc652bab5576": {
+        "id": "8961e656-d01e-4109-838b-dc652bab5576",
+        "parent": null,
+        "name": "qq",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "1c4d0667-4429-4475-9c38-cb5bf9d3a973"
+        ],
+        "isRemovable": false,
+        "filePath": "qq"
+      },
+      "1c4d0667-4429-4475-9c38-cb5bf9d3a973": {
+        "id": "1c4d0667-4429-4475-9c38-cb5bf9d3a973",
+        "parent": "8961e656-d01e-4109-838b-dc652bab5576",
+        "name": "function.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "qq/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "scheduler-trigger",
+            "config": {
+              "type": "",
+              "schedulePattern": "40 15 * * *",
+              "jobId": "test1",
+              "timezone": "America/Thule"
+            }
+          }
+        ]
+      },
+      "2ee1e02a-d600-4250-a3a5-33e01999bde0": {
+        "id": "2ee1e02a-d600-4250-a3a5-33e01999bde0",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.qqfunction = require(\"./qq/function.js\").handler;"
+      },
+      "7bcbf358-1b26-43cd-a7e1-54fda6199c64": {
+        "id": "7bcbf358-1b26-43cd-a7e1-54fda6199c64",
+        "parent": null,
+        "name": "main.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "main.py",
+        "code": "# This file is used to register all your cloud functions in GCP.\n# DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\n"
+      }
+    },
+    "rootNode": "8961e656-d01e-4109-838b-dc652bab5576",
+    "openFiles": [
+      "1c4d0667-4429-4475-9c38-cb5bf9d3a973"
+    ],
+    "currentFileId": "1c4d0667-4429-4475-9c38-cb5bf9d3a973",
+    "resources": {
+      "scheduler-trigger": {
+        "name": "scheduler-trigger",
+        "type": "scheduler-trigger",
+        "config": {}
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "AWS_REGION",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "qq",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east1",
+    "platform": "GCP",
+    "platformRegions": {
+      "AWS": "us-east-1"
+    },
+    "lastSave": 1568887716181
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "qq",
+      "url": "https://github.com/Indunil1992/qq"
+    }
+  }
+}
